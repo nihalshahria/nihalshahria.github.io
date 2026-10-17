@@ -1,0 +1,5 @@
+.DS_Store
+# Source notes used to write the CV, not part of the site
+CV_PROMPT.md
+# Local copy of the CV; the site links to the cv-builder repo instead
+Md_Shahria_Islam_Nihal_CV.pdf

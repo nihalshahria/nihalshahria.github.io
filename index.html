@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Md. Shahria Islam Nihal · Backend Engineer (Go, Microservices)</title>
+		<meta
+			name="description"
+			content="Md. Shahria Islam Nihal: backend engineer building robust, event-driven microservices in Go for fintech and other critical systems, with Web3 experience across EVM, SVM and TVM chains."
+		/>
+		<meta name="author" content="Md. Shahria Islam Nihal" />
+		<meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#f7f9fb" media="(prefers-color-scheme: light)" />
+		<link rel="canonical" href="https://nihalshahria.github.io/" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Md. Shahria Islam Nihal · Backend Engineer (Go, Microservices)" />
+		<meta
+			property="og:description"
+			content="Robust, event-driven Go microservices for fintech and critical systems."
+		/>
+		<meta property="og:url" content="https://nihalshahria.github.io/" />
+		<meta property="og:image" content="https://nihalshahria.github.io/assets/img/og.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<script>
+			// Apply saved theme before paint to avoid a flash.
+			(function () {
+				document.documentElement.classList.add('js');
+				try {
+					var t = localStorage.getItem('theme');
+					if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+					document.documentElement.setAttribute('data-theme', t);
+				} catch (e) {}
+			})();
+		</script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Md. Shahria Islam Nihal",
+				"jobTitle": "Software Engineer",
+				"url": "https://nihalshahria.github.io/",
+				"email": "mailto:nihalshahria@gmail.com",
+				"address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+				"alumniOf": "Shahjalal University of Science and Technology",
+				"knowsAbout": [
+					"Go",
+					"Microservices",
+					"Event-driven architecture",
+					"Kafka",
+					"PostgreSQL",
+					"Fintech",
+					"Web3"
+				],
+				"sameAs": [
+					"https://github.com/nihalshahria",
+					"https://linkedin.com/in/nihalshahria",
+					"https://codeforces.com/profile/nihalshahria",
+					"https://www.codechef.com/users/nihalshahria"
+				]
+			}
+		</script>
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<div class="bg-grid" aria-hidden="true"></div>
+		<div class="bg-grid bg-grid--hl" aria-hidden="true"></div>
+		<div class="bg-glow" aria-hidden="true"></div>
+
+		<header class="nav" id="top">
+			<div class="container nav__inner">
+				<a class="nav__brand" href="#top" aria-label="Home">
+					<span class="nav__logo">N</span><span class="mono">nihal<span class="accent">.go</span></span>
+				</a>
+				<nav aria-label="Primary">
+					<ul class="nav__links" id="nav-links">
+						<li><a href="#about">About</a></li>
+						<li><a href="#experience">Experience</a></li>
+						<li><a href="#highlights">Highlights</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="nav__actions">
+					<button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle color theme">
+						<svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true">
+							<circle cx="12" cy="12" r="4" />
+							<path
+								d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+							/>
+						</svg>
+						<svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+						</svg>
+					</button>
+					<a
+						class="btn btn--sm btn--ghost hide-sm"
+						href="https://raw.githubusercontent.com/nihalshahria/cv-builder/refs/heads/main/rendercv_output/Md_Shahria_Islam_Nihal_CV.pdf"
+						>CV</a
+					>
+					<button
+						class="icon-btn nav__burger"
+						id="nav-toggle"
+						type="button"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="nav-links"
+					>
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main id="main">
+			<!-- HERO -->
+			<section class="hero">
+				<div class="container hero__inner">
+					<div class="hero__text">
+						<p class="status reveal">
+							<span class="status__dot"></span>Open to remote &amp; hybrid backend roles
+						</p>
+						<h1 class="reveal">
+							Hi, I'm <span class="gradient-text">Nihal</span>.<br />
+							I build backend systems you can trust.
+						</h1>
+						<p class="hero__lead reveal">
+							Backend engineer at <strong>Fin.com</strong>, building event-driven
+							<strong>Go microservices</strong> for payments, where correctness and
+							<strong>data integrity</strong> matter most.
+						</p>
+						<div class="hero__cta reveal">
+							<a class="btn btn--primary" href="#contact" data-magnetic>Get in touch</a>
+							<a
+								class="btn btn--ghost"
+								href="https://raw.githubusercontent.com/nihalshahria/cv-builder/refs/heads/main/rendercv_output/Md_Shahria_Islam_Nihal_CV.pdf"
+								data-magnetic
+							>
+								<svg viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+								</svg>
+								Download CV
+							</a>
+						</div>
+						<ul class="socials reveal" aria-label="Profiles">
+							<li>
+								<a
+									data-magnetic
+									href="https://github.com/nihalshahria"
+									target="_blank"
+									rel="noopener"
+									aria-label="GitHub"
+									><svg viewBox="0 0 24 24" aria-hidden="true">
+										<path
+											fill="currentColor"
+											stroke="none"
+											d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"
+										/></svg
+								></a>
+							</li>
+							<li>
+								<a
+									data-magnetic
+									href="https://linkedin.com/in/nihalshahria"
+									target="_blank"
+									rel="noopener"
+									aria-label="LinkedIn"
+									><svg viewBox="0 0 24 24" aria-hidden="true">
+										<path
+											fill="currentColor"
+											stroke="none"
+											d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"
+										/></svg
+								></a>
+							</li>
+							<li>
+								<a data-magnetic href="mailto:nihalshahria@gmail.com" aria-label="Email"
+									><svg viewBox="0 0 24 24" aria-hidden="true">
+										<rect x="3" y="5" width="18" height="14" rx="2" />
+										<path d="m3 7 9 6 9-6" /></svg
+								></a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tilt reveal">
+						<div class="terminal" aria-label="Code snippet describing Nihal">
+							<div class="terminal__bar">
+								<span></span><span></span><span></span>
+								<p class="mono">~/nihal/main.go</p>
+							</div>
+							<pre class="terminal__body mono" id="code"><code><span class="tk-k">package</span> main
+
+<span class="tk-k">type</span> <span class="tk-t">Engineer</span> <span class="tk-k">struct</span> {
+    Name     <span class="tk-t">string</span>
+    Role     <span class="tk-t">string</span>
+    Stack    []<span class="tk-t">string</span>
+    Chains   []<span class="tk-t">string</span>
+    WorkMode []<span class="tk-t">string</span>
+}
+
+<span class="tk-k">func</span> <span class="tk-f">main</span>() {
+    me := <span class="tk-t">Engineer</span>{
+        Name: <span class="tk-s">"Md. Shahria Islam Nihal"</span>,
+        Role: <span class="tk-s">"Software Engineer L2 @ Fin.com"</span>,
+        Stack: []<span class="tk-t">string</span>{
+            <span class="tk-s">"Go"</span>, <span class="tk-s">"SQL"</span>, <span class="tk-s">"Microservices"</span>,
+            <span class="tk-s">"Event-driven"</span>, <span class="tk-s">"Web3"</span>,
+        },
+        Chains:   []<span class="tk-t">string</span>{<span class="tk-s">"EVM"</span>, <span class="tk-s">"SVM"</span>, <span class="tk-s">"TVM"</span>},
+        WorkMode: []<span class="tk-t">string</span>{<span class="tk-s">"Remote"</span>, <span class="tk-s">"Hybrid"</span>},
+    }
+    <span class="tk-f">hire</span>(me) <span class="tk-c">// 👋</span>
+}<span class="caret"></span></code></pre>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<dl class="stats reveal">
+						<div>
+							<dt>In industry since</dt>
+							<dd>2023</dd>
+						</div>
+						<div>
+							<dt>Primary language</dt>
+							<dd>Go</dd>
+						</div>
+						<div>
+							<dt>Architecture</dt>
+							<dd>Microservices</dd>
+						</div>
+						<div>
+							<dt>Work mode</dt>
+							<dd>Remote · Hybrid</dd>
+						</div>
+					</dl>
+				</div>
+			</section>
+
+			<!-- ABOUT -->
+			<section class="section" id="about">
+				<div class="container">
+					<header class="section__head reveal">
+						<p class="eyebrow mono">01 / about</p>
+						<h2>About me</h2>
+					</header>
+					<div class="about">
+						<div class="about__text reveal">
+							<p>
+								I'm a backend engineer in Dhaka, Bangladesh. At Fin.com I'm part of the core team that
+								built our microservices from scratch, with most of my work in payments.
+							</p>
+							<p>
+								Before that I wrote Java at <strong>Therap</strong> and C#/.NET at
+								<strong>Orbitax</strong>.
+							</p>
+							<p class="about__looking">
+								<span class="mono accent">&gt;</span> Looking for <strong>Go backend</strong> roles, especially in fintech and critical systems.
+							</p>
+						</div>
+						<ul class="about__cards">
+							<li class="card reveal">
+								<div class="card__icon">
+									<svg viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M4 12h4l3-8 4 16 3-8h2" />
+									</svg>
+								</div>
+								<h3>Event-driven systems</h3>
+								<p>Kafka and RabbitMQ between services, and async work without race conditions.</p>
+							</li>
+							<li class="card reveal">
+								<div class="card__icon">
+									<svg viewBox="0 0 24 24" aria-hidden="true">
+										<rect x="2" y="6" width="20" height="13" rx="2" />
+										<path d="M2 10h20M6 15h4" />
+									</svg>
+								</div>
+								<h3>Fintech &amp; payments</h3>
+								<p>Exchange payments, onboarding and on/off-ramp flows for a B2B platform.</p>
+							</li>
+							<li class="card reveal">
+								<div class="card__icon">
+									<svg viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z" />
+										<path d="m9 12 2 2 4-4" />
+									</svg>
+								</div>
+								<h3>Correctness first</h3>
+								<p>State machines, idempotency and tuned PostgreSQL keep data consistent.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- EXPERIENCE -->
+			<section class="section" id="experience">
+				<div class="container">
+					<header class="section__head reveal">
+						<p class="eyebrow mono">02 / experience</p>
+						<h2>Where I've worked</h2>
+					</header>
+
+					<ol class="timeline">
+						<li class="job reveal">
+							<div class="job__meta">
+								<span class="job__date mono">Jul 2025 — Present</span>
+								<span class="badge">Remote</span>
+							</div>
+							<div class="job__body">
+								<h3>
+									Software Engineer L2 ·
+									<a href="https://fin.com/" target="_blank" rel="noopener">Fin.com</a>
+								</h3>
+								<p class="job__sub">
+									Cross-border payments infrastructure · core backend team ·
+									<a
+										class="job__product"
+										href="https://orchestration.fin.com"
+										target="_blank"
+										rel="noopener"
+										>Fin.com Orchestration</a
+									>
+								</p>
+								<ul class="job__list">
+									<li>
+										Built our <strong>event-driven microservices from scratch</strong> with the
+										team, using Go (Echo), PostgreSQL, Kafka, RabbitMQ and Redis on AWS.
+									</li>
+									<li>
+										Built the <strong>exchange payment system</strong>: end users pay from their <strong>Bybit, OKX or Kraken</strong> accounts, and the
+										business receives the funds in the wallet it chooses. Also built exchange-house
+										payment flows.
+									</li>
+									<li>
+										Built KYC/KYB onboarding (including RFI), on-ramp and off-ramp flows on
+										<strong>state machines</strong>, so every transition is deterministic and each
+										step can be retried safely.
+									</li>
+									<li>
+										Designed and built the <strong>webhook system</strong> on my own, from registration to delivery and retries.
+									</li>
+									<li>
+										Wrote <strong>distributed tracing</strong> for the whole system, so one flow can
+										be followed end to end across services.
+									</li>
+									<li>
+										Sped up <strong>PostgreSQL</strong> by adding indexes for hot queries, fixing
+										N+1 queries and rewriting heavy joins and subqueries.
+									</li>
+									<li>
+										Designed and built a <strong>Web3 abstraction service</strong> on my own across EVM, SVM and TVM chains, including transaction simulation and gas estimation APIs.
+									</li>
+									<li>
+										Contributed to every vendor integration and led several of them end to end.
+									</li>
+									<li>
+										Built AI automations for issue tracking (creation, assignment, status updates) and customer queries, plus Git-flow automation scripts.
+									</li>
+								</ul>
+								<ul class="tags">
+									<li>Go</li>
+									<li>Echo</li>
+									<li>Kafka</li>
+									<li>RabbitMQ</li>
+									<li>Redis</li>
+									<li>PostgreSQL</li>
+									<li>AWS</li>
+									<li>NestJS</li>
+									<li>Kubernetes</li>
+									<li>ArgoCD</li>
+									<li>Grafana</li>
+									<li>Prometheus</li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="job reveal">
+							<div class="job__meta">
+								<span class="job__date mono">Mar 2024 — Jun 2025</span>
+								<span class="badge">Dhaka</span>
+							</div>
+							<div class="job__body">
+								<h3>
+									Software Engineer L1 ·
+									<a href="https://www.therapservices.net/" target="_blank" rel="noopener"
+										>Therap Services</a
+									>
+								</h3>
+								<p class="job__sub">Healthcare SaaS · large monorepo</p>
+								<ul class="job__list">
+									<li>
+										Designed and built a <strong>Playwright end-to-end testing module</strong> from scratch, owning its architecture.
+									</li>
+									<li>
+										Built <strong>HTML-to-PDF generation</strong> with a custom script on top of a
+										JS library to support custom CSS.
+									</li>
+									<li>
+										Shipped bug fixes, improvements and features in a large monorepo.
+									</li>
+									<li>
+										Completed an intensive 5–6 month training program: Java internals, advanced version control, Spring, Hibernate and JSP.
+									</li>
+								</ul>
+								<ul class="tags">
+									<li>Java</li>
+									<li>Spring</li>
+									<li>Hibernate</li>
+									<li>JSP</li>
+									<li>React</li>
+									<li>jQuery</li>
+									<li>Playwright</li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="job reveal">
+							<div class="job__meta">
+								<span class="job__date mono">Feb 2023 — Jul 2023</span>
+								<span class="badge">Internship</span>
+							</div>
+							<div class="job__body">
+								<h3>
+									Software Engineering Intern ·
+									<a href="https://orbitax.com/" target="_blank" rel="noopener">Orbitax</a>
+								</h3>
+								<p class="job__sub">Tax technology · core backend team</p>
+								<ul class="job__list">
+									<li>
+										Debugged <strong>distributed locking and resource locking</strong> problems in a
+										microservice system.
+									</li>
+									<li>
+										Worked on <strong>Mandatory Disclosure Rules</strong> modules (EU DAC6, UK MDR),
+										including a dynamic form builder automated with
+										<strong>Liquid templates</strong>.
+									</li>
+									<li>
+										Received a full-time offer at the end of the internship.
+									</li>
+								</ul>
+								<ul class="tags">
+									<li>C#</li>
+									<li>.NET</li>
+									<li>AngularJS</li>
+									<li>Liquid</li>
+									<li>Microservices</li>
+								</ul>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<!-- HIGHLIGHTS -->
+			<section class="section section--alt" id="highlights">
+				<div class="container">
+					<header class="section__head reveal">
+						<p class="eyebrow mono">03 / highlights</p>
+						<h2>Career highlights</h2>
+						<p class="section__lead">A look at some of the systems I've designed and built.</p>
+					</header>
+
+					<!-- Webhooks -->
+					<div class="highlight">
+						<div class="highlight__head reveal">
+							<h3>Webhook system</h3>
+							<p>
+								Designed and built end to end on my own. Customers register webhooks for the events they care about, and every event reaches them reliably.
+							</p>
+						</div>
+						<div class="features">
+							<article class="feature reveal">
+								<span class="feature__num mono">01</span>
+								<h4>Registration &amp; management</h4>
+								<p>Customers register multiple webhooks and subscribe each one to different events.</p>
+							</article>
+							<article class="feature reveal">
+								<span class="feature__num mono">02</span>
+								<h4>Event delivery</h4>
+								<p>When an event fires, it is sent to every webhook subscribed to it.</p>
+							</article>
+							<article class="feature reveal">
+								<span class="feature__num mono">03</span>
+								<h4>Automatic &amp; manual retries</h4>
+								<p>
+									Failed deliveries are retried automatically, and customers can also retry them manually, so a short outage on their side loses nothing.
+								</p>
+							</article>
+						</div>
+					</div>
+
+					<!-- State machines -->
+					<div class="highlight">
+						<div class="highlight__head reveal">
+							<h3>State machines for critical flows</h3>
+							<p>
+								I added state machines to customer onboarding and transaction flows, so the next step
+								from any state is always defined.
+							</p>
+						</div>
+						<div class="features">
+							<article class="feature reveal">
+								<span class="feature__num mono">01</span>
+								<h4>Deterministic</h4>
+								<p>Every state has a fixed set of next steps, so the flow never has to guess.</p>
+							</article>
+							<article class="feature reveal">
+								<span class="feature__num mono">02</span>
+								<h4>Rules enforced</h4>
+								<p>Invalid transitions are rejected, so a flow can't skip a step or break a rule.</p>
+							</article>
+							<article class="feature reveal">
+								<span class="feature__num mono">03</span>
+								<h4>Safe retries</h4>
+								<p>Because each state is explicit, a failed step can be retried without side effects.</p>
+							</article>
+						</div>
+					</div>
+
+					<!-- Web3 -->
+					<div class="highlight" id="web3">
+						<div class="highlight__head reveal">
+							<h3>Web3 abstraction service</h3>
+							<p>
+								Designed and built on my own. Other services send it a simple request and get back
+								reliable, idempotent transactions on EVM, SVM and TVM chains. It puts correctness
+								before speed.
+							</p>
+						</div>
+
+					<div class="flow reveal" aria-label="Request flow through the Web3 service">
+						<div class="flow__node">Web2 service</div>
+						<div class="flow__arrow" aria-hidden="true"></div>
+						<div class="flow__node flow__node--main">
+							Web3 abstraction<small class="mono">simulation · gas · idempotency</small>
+						</div>
+						<div class="flow__arrow" aria-hidden="true"></div>
+						<div class="flow__node">
+							Wallet providers &amp; RPC<small class="mono"
+								>Circle · Privy · Fireblocks · QuickNode</small
+							>
+						</div>
+					</div>
+
+					<div class="features">
+						<article class="feature reveal">
+							<span class="feature__num mono">01</span>
+							<h4>Wallet provider integrations</h4>
+							<p>Integrated Circle, Privy and Fireblocks, using their wallet and transaction APIs.</p>
+						</article>
+						<article class="feature reveal">
+							<span class="feature__num mono">02</span>
+							<h4>Direct chain access</h4>
+							<p>
+								Raw transactions over RPC (QuickNode and other providers): create and broadcast, then
+								monitor the chain for status updates.
+							</p>
+						</article>
+						<article class="feature reveal">
+							<span class="feature__num mono">03</span>
+							<h4>Transaction simulation</h4>
+							<p>
+								A simulation API that dry-runs raw transactions on EVM and SVM chains before they are
+								sent.
+							</p>
+						</article>
+						<article class="feature reveal">
+							<span class="feature__num mono">04</span>
+							<h4>Gas estimation</h4>
+							<p>A gas estimation API for EVM, SVM and TVM chains, so fees are known up front.</p>
+						</article>
+						<article class="feature reveal">
+							<span class="feature__num mono">05</span>
+							<h4>Idempotency</h4>
+							<p>If the same transaction request arrives again, it is never executed twice.</p>
+						</article>
+						<article class="feature reveal">
+							<span class="feature__num mono">06</span>
+							<h4>No missed updates</h4>
+							<p>
+								Every transaction status change is captured and published to the services that depend on it.
+							</p>
+						</article>
+					</div>
+
+					<ul class="chains reveal" aria-label="Supported chain families and token standards">
+						<li><span class="chain-dot" style="--c: #627eea"></span>EVM chains</li>
+						<li><span class="chain-dot" style="--c: #14f195"></span>SVM chains</li>
+						<li><span class="chain-dot" style="--c: #ff060a"></span>TVM chains</li>
+						<li class="chains__sep" aria-hidden="true"></li>
+						<li class="mono">ERC-20 tokens</li>
+						<li class="mono">SPL tokens</li>
+						<li class="mono">TRC-20 tokens</li>
+					</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- SKILLS -->
+			<section class="section" id="skills">
+				<div class="container">
+					<header class="section__head reveal">
+						<p class="eyebrow mono">04 / toolbox</p>
+						<h2>Skills &amp; technologies</h2>
+					</header>
+					<div class="skills">
+						<div class="skill-group reveal">
+							<h3>Languages</h3>
+							<ul class="tags tags--lg">
+								<li class="hot">Go</li>
+								<li>Java</li>
+								<li>TypeScript</li>
+								<li>JavaScript</li>
+								<li>C#</li>
+								<li>C++</li>
+								<li>C</li>
+								<li class="hot">SQL</li>
+								<li>Bash</li>
+							</ul>
+						</div>
+						<div class="skill-group reveal">
+							<h3>Data &amp; messaging</h3>
+							<ul class="tags tags--lg">
+								<li class="hot">PostgreSQL</li>
+								<li class="hot">Kafka</li>
+								<li>RabbitMQ</li>
+								<li>Redis</li>
+							</ul>
+						</div>
+						<div class="skill-group reveal">
+							<h3>Architecture &amp; APIs</h3>
+							<ul class="tags tags--lg">
+								<li class="hot">Microservices</li>
+								<li class="hot">Event-driven</li>
+								<li>REST</li>
+								<li>gRPC</li>
+								<li>Webhooks</li>
+								<li>Distributed tracing</li>
+							</ul>
+						</div>
+						<div class="skill-group reveal">
+							<h3>Frameworks</h3>
+							<ul class="tags tags--lg">
+								<li class="hot">Echo</li>
+								<li>NestJS</li>
+								<li>Spring</li>
+								<li>Hibernate</li>
+								<li>ASP.NET</li>
+								<li>Entity Framework</li>
+								<li>React</li>
+								<li>AngularJS</li>
+								<li>Playwright</li>
+							</ul>
+						</div>
+						<div class="skill-group reveal">
+							<h3>Cloud &amp; DevOps</h3>
+							<ul class="tags tags--lg">
+								<li class="hot">AWS</li>
+								<li>Kubernetes (learning)</li>
+								<li>ArgoCD</li>
+								<li>Prometheus</li>
+								<li>Grafana</li>
+								<li>Git</li>
+								<li>Linux</li>
+							</ul>
+						</div>
+						<div class="skill-group reveal">
+							<h3>Web3</h3>
+							<ul class="tags tags--lg">
+								<li>EVM chains</li>
+								<li>SVM chains</li>
+								<li>TVM chains</li>
+								<li>ERC-20 / SPL / TRC-20 tokens</li>
+								<li>Circle</li>
+								<li>Privy</li>
+								<li>Fireblocks</li>
+								<li>QuickNode RPC</li>
+								<li>Transaction simulation</li>
+								<li>Gas estimation</li>
+								<li>On-chain event capture</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- PROJECTS & ACHIEVEMENTS -->
+			<section class="section section--alt" id="projects">
+				<div class="container">
+					<header class="section__head reveal">
+						<p class="eyebrow mono">05 / work</p>
+						<h2>Projects &amp; achievements</h2>
+					</header>
+
+					<div class="projects">
+						<article class="project project--featured reveal">
+							<div class="project__featured-main">
+								<div class="project__top">
+									<span class="badge badge--accent">Production · Fin.com</span>
+									<a
+										href="https://orchestration.fin.com"
+										target="_blank"
+										rel="noopener"
+										aria-label="Fin.com Orchestration (sign-in page)"
+										class="project__link"
+										><svg viewBox="0 0 24 24" aria-hidden="true">
+											<path d="M7 17 17 7M8 7h9v9" /></svg
+									></a>
+								</div>
+								<h3>Fin.com Orchestration</h3>
+								<p>
+									Fin.com's cross-border payments platform. All my Fin.com work is for this product,
+									as part of the core backend team that built it from scratch.
+								</p>
+								<p class="project__note mono">Backend work · live product, sign-in required</p>
+							</div>
+							<ul class="tags project__tags">
+								<li>Go</li>
+								<li>Echo</li>
+								<li>Kafka</li>
+								<li>RabbitMQ</li>
+								<li>Redis</li>
+								<li>PostgreSQL</li>
+								<li>AWS</li>
+							</ul>
+						</article>
+
+						<article class="project project--award reveal">
+							<div class="project__top">
+								<svg class="project__folder" viewBox="0 0 24 24" aria-hidden="true">
+									<path
+										d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"
+									/>
+								</svg>
+								<div class="project__actions">
+									<span class="badge badge--gold">Hackathon · Top 5</span>
+									<a
+										href="https://github.com/nihalshahria/Health-Hub"
+										target="_blank"
+										rel="noopener"
+										aria-label="HealthHub on GitHub"
+										class="project__link"
+										><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg
+									></a>
+								</div>
+							</div>
+							<h3>HealthHub</h3>
+							<p>
+								A telemedicine platform my team built at the BRAC University National Hackathon 2021,
+								placing in the top 5: doctor availability and booking, live video consultations, online
+								prescriptions and a medicine database.
+							</p>
+							<ul class="tags">
+								<li>MongoDB</li>
+								<li>Express</li>
+								<li>React</li>
+								<li>Node.js</li>
+								<li>Socket.io</li>
+							</ul>
+						</article>
+
+						<article class="project reveal">
+							<div class="project__top">
+								<svg class="project__folder" viewBox="0 0 24 24" aria-hidden="true">
+									<path
+										d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+									/>
+								</svg>
+								<a
+									href="https://github.com/nihalshahria/Teacher-Staff-remuneration"
+									target="_blank"
+									rel="noopener"
+									aria-label="Teacher-Staff Remuneration on GitHub"
+									class="project__link"
+									><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg
+								></a>
+							</div>
+							<h3>Teacher-Staff Remuneration</h3>
+							<p>
+								A remuneration management system. I did the backend and database design, using Entity
+								Framework and token-based authentication.
+							</p>
+							<ul class="tags">
+								<li>ASP.NET</li>
+								<li>Entity Framework</li>
+								<li>PostgreSQL</li>
+								<li>React</li>
+							</ul>
+						</article>
+					
+					</div>
+
+					<div class="cp reveal">
+						<div class="cp__intro">
+							<h3>Problem solving</h3>
+							<p>
+								I did competitive programming at university and mentored juniors in DSA. Now I solve
+								problems for fun.
+							</p>
+						</div>
+						<ul class="cp__stats">
+							<li>
+								<a href="https://codeforces.com/profile/nihalshahria" target="_blank" rel="noopener"
+									><span class="cp__num">1400+</span
+									><span class="cp__label">Codeforces max rating</span></a
+								>
+							</li>
+							<li>
+								<a href="https://www.codechef.com/users/nihalshahria" target="_blank" rel="noopener"
+									><span class="cp__num">1600+</span
+									><span class="cp__label">CodeChef max rating</span></a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.stopstalk.com/user/profile/nihalshahria"
+									target="_blank"
+									rel="noopener"
+									><span class="cp__num">1000+</span><span class="cp__label">Problems solved</span></a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- EDUCATION -->
+			<section class="section" id="education">
+				<div class="container">
+					<header class="section__head reveal">
+						<p class="eyebrow mono">06 / education</p>
+						<h2>Education</h2>
+					</header>
+					<div class="edu reveal">
+						<div class="edu__main">
+							<h3>B.Sc. (Engg.) in Software Engineering</h3>
+							<p>Shahjalal University of Science and Technology (SUST), Sylhet</p>
+							<p class="mono muted">Jan 2019 — Jan 2024 · CGPA 3.76 / 4.00</p>
+						</div>
+					</div>
+					<ul class="extras reveal">
+						<li><strong>Volunteer:</strong> Lab Management Team, LICT SUST TechFest 2019</li>
+						<li><strong>Languages:</strong> Bangla (native), English (professional)</li>
+						<li><strong>Off the keyboard:</strong> table tennis, badminton, travelling</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- CONTACT -->
+			<section class="section contact" id="contact">
+				<div class="container contact__inner reveal">
+					<p class="eyebrow mono">07 / contact</p>
+					<h2>Let's build something reliable.</h2>
+					<p class="section__lead">
+						Based in Dhaka (UTC+6), open to remote and hybrid Go backend roles. Email is the best way to
+						reach me.
+					</p>
+					<div class="contact__actions">
+						<a class="btn btn--primary btn--lg" data-magnetic href="mailto:nihalshahria@gmail.com"
+							>nihalshahria@gmail.com</a
+						>
+						<button
+							class="btn btn--ghost btn--lg"
+							type="button"
+							data-magnetic
+							id="copy-email"
+							data-email="nihalshahria@gmail.com"
+						>
+							Copy email
+						</button>
+					</div>
+					<p class="contact__links">
+						<a href="https://linkedin.com/in/nihalshahria" target="_blank" rel="noopener">LinkedIn</a>
+						<a href="https://github.com/nihalshahria" target="_blank" rel="noopener">GitHub</a>
+						<a href="https://raw.githubusercontent.com/nihalshahria/cv-builder/refs/heads/main/rendercv_output/Md_Shahria_Islam_Nihal_CV.pdf">CV (PDF)</a>
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer__inner">
+				<p class="mono">© <span id="year">2026</span> Md. Shahria Islam Nihal · Dhaka, Bangladesh</p>
+				<a class="mono" href="#top">Back to top ↑</a>
+			</div>
+		</footer>
+
+		<div class="toast" id="toast" role="status" aria-live="polite"></div>
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>
