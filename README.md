@@ -2,7 +2,7 @@
 
 Personal portfolio of **Md. Shahria Islam Nihal**, backend engineer (Go, event-driven fintech, Web3).
 
-Live: https://nihalshahria.github.io
+Live: https://portfolio.oubliette.xyz
 
 ## Stack
 
@@ -29,7 +29,7 @@ python3 -m http.server 8000
 
 Push to `master`. In the repo go to **Settings → Pages → Build and deployment**, set
 **Source: Deploy from a branch**, **Branch: `master` / `(root)`**. The site goes live at
-https://nihalshahria.github.io within a minute or two.
+https://portfolio.oubliette.xyz within a minute or two.
 
 ## Updating
 
